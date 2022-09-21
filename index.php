@@ -4,101 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía 5 | PHP</title>
+    <title>Solucíon guía 5 | PHP</title>
 </head>
 <body>
-    <form methot="post">
+    <form action="index.php" method="post">
+        <h2>Test Básico Uniminuto</h2>
         <p>Cuantos lados tiene un pentágono?</p>
-        <p>a. 6 <input type="checkbox" name="i"></p>
-        <p>b. 4 <input type="checkbox" name="i"></p>
-        <p>c. 5 <input type="checkbox" name="c"></p>
-        <p>d. 8 <input type="checkbox" name="i"></p>
+        a. 6 <input type="checkbox" name="pr1">
+        b. 4 <input type="checkbox" name="pr1">
+        c. 5 <input type="checkbox" name="pr1">
+        d. 8 <input type="checkbox" name="pr1">
 
-        <p>Como se llama el triangulo que tiene sus tres lados distintos?</p>
-        <p>a. Equilatero <input type="checkbox" name="i" value="a"></p>
-        <p>b. Isósceles <input type="checkbox" name="i" value="b"></p>
-        <p>c. Escaleno <input type="checkbox" name="c" value="c"></p>
-        <p>d. Acutángulo <input type="checkbox" name="i" value="d"></p>
+        <p>Como se llama el triángulo que tiene sus tres lados distintos?</p>
+        a. Equilatero <input type="checkbox" name="pr2" value="a">
+        b. Isósceles <input type="checkbox" name="pr2" value="b">
+        c. Escaleno <input type="checkbox" name="pr2" value="c">
+        d. Acutángulo <input type="checkbox" name="pr2" value="d">
 
-        <p>Que letra representa los numeros enteros?</p>
-        <p>a. R <input type="checkbox" name="i" value="a"></p>
-        <p>b. Z <input type="checkbox" name="i" value="b"></p>
-        <p>c. Q <input type="checkbox" name="c" value="c"></p>
-        <p>d. N <input type="checkbox" name="i" value="d"></p>
+        <p>Que letra representa los números enteros?</p>
+        a. R <input type="checkbox" name="pr3" value="a">
+        b. Z <input type="checkbox" name="pr3" value="b">
+        c. Q <input type="checkbox" name="pr3" value="c">
+        d. N <input type="checkbox" name="pr3" value="d">
 
-        <p>Que numero sigue en la sucesion de numeros 5, 8, 11, 14, 17</p>
-        <p>a. 21 <input type="checkbox" name="i" value="a"></p>
-        <p>b. 19 <input type="checkbox" name="i" value="b"></p>
-        <p>c. 20 <input type="checkbox" name="c" value="c"></p>
-        <p>d. 22 <input type="checkbox" name="i" value="d"></p>
+        <p>Que número sigue en la sucesión de numeros 5, 8, 11, 14, 17</p>
+        a. 21 <input type="checkbox" name="pr4" value="a">
+        b. 19 <input type="checkbox" name="pr4" value="b">
+        c. 20 <input type="checkbox" name="pr4" value="c">
+        d. 22 <input type="checkbox" name="pr4" value="d">
 
-        <p>Que numero sigue en la sucesion de numeros 2, 7, 3, 6, 4, 5, 5, 4</p>
-        <p>a. 6 <input type="checkbox" name="i" value="a"></p>
-        <p>b. 4 <input type="checkbox" name="i" value="b"></p>
-        <p>c. 7 <input type="checkbox" name="i" value="c"></p>
-        <p>d. 5 <input type="checkbox" name="c" value="d"></p>
+        <p>Que número sigue en la sucesion de 2, 7, 3, 6, 4, 5, 5, 4</p>
+        a. 6 <input type="checkbox" name="pr5" value="a">
+        b. 4 <input type="checkbox" name="pr5" value="b">
+        c. 7 <input type="checkbox" name="pr5" value="c">
+        d. 5 <input type="checkbox" name="pr5" value="d">
 
-        <p>Cuanto es el resultado de 5/3 * 2/4</p>
-        <p>a. 20/6 <input type="checkbox" name="i" value="a"></p>
-        <p>b. 10/3 <input type="checkbox" name="c" value="b"></p>
-        <p>c. 5/6 <input type="checkbox" name="i" value="c"></p>
-        <p>d. 7/6 <input type="checkbox" name="i" value="d"></p>
+        <p>Cuánto es el resultado de 5/3 * 2/4</p>
+        a. 20/6 <input type="checkbox" name="pr6" value="a">
+        b. 10/3 <input type="checkbox" name="pr6" value="b">
+        c. 5/6 <input type="checkbox" name="pr6" value="c">
+        d. 7/6 <input type="checkbox" name="pr6" value="d">
 
-        <p><input type ="submit" value ="Verificar"</p>
+        <p><input type="submit" name="enviar" value="Enviar"></p>
     </form>
 
     <?php
         $c = 0;
         $i = 0; 
 
-        if ($_POST['c'] == "c"){
+        if (isset($_POST['pr1'])) {
             $c++;
-        }else{
+        } else{
+            $i++;
+        }
+        if (isset($_POST['pr2'])) {
+            $c++;
+        } else {
+            $i++;
+        }
+        if (isset($_POST['pr3'])) {
+            $c++;
+        } else {
+            $i++;
+        }
+        if (isset($_POST['pr4'])) {
+            $c++;
+        } else {
+            $i++;
+        }
+        if (isset($_POST['pr5'])) {
+            $c++;
+        } else {
+            $i++;
+        }
+        if (isset($_POST['pr6'])) {
+            $c++;
+        } else {
             $i++;
         }
 
-        if ($_POST['c'] == "c"){
-            $c +=1;
-        }else{
-            print "Respuesta 2 incorrecta <br>";
-            $i +=1;
-        }
-        if ($r3 == "b"){
-            print "Respuesta 3 correcta! <br>";
-            $c +=1;
-        }else{
-            print "Respuesta 3 incorrecta <br>";
-            $i +=1;
-        }
-
-        if ($r4 == "c"){
-            print "Respuesta 4 correcta! <br>";
-            $c +=1;
-        }else{
-            print "Respuesta 4 incorrecta <br>";
-            $i +=1;
-        }
-        if ($r1 == "a"){
-            print "Respuesta 5 correcta! <br>";
-            $c +=1;
-        }else{
-            print "Respuesta 5 incorrecta <br>";
-            $i +=1;
-        }
-
-        if ($r2 == "c"){
-            print "Respuesta 6 correcta! <br>";
-            $c +=1;
-        }else{
-            print "Respuesta 6 incorrecta <br>";
-            $i +=1;
-        }
-
-        if ($c==6){
-            print "Felicitaciones, tus respuestas correctas son " .$c;        
-        }else {
-            print "Tus respuestas correctas son ".$c;
-            print "Tus respuestas incorrectas son " .$i;
+        if ($_POST['enviar']) {
+            echo "Cantidad de respuestas correctas: $c</br>";
+            echo "Cantidad de respuestas incorrectas: $i";
         }
     ?>
 </body>
